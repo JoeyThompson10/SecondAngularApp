@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - ng build
+  artifacts:
+    baseDirectory: /dist/second-angular-app/browser
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
